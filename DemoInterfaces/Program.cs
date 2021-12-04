@@ -1,14 +1,10 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DemoInterfaces
 {
-    class Program
+    internal class Program
     {
-        static void Main(string[] args)
+        private static void Main(string[] args)
         {
             var dog = new Dog("Goshy", "arf");
             var cat = new Cat("Ming2x", "Meow");
@@ -18,20 +14,22 @@ namespace DemoInterfaces
     }
 }
 
-interface IAnimal
+internal interface IAnimal
 {
     void Details();
 }
 
-class Dog : IAnimal
+internal class Dog : IAnimal
 {
     public string name { get; set; }
     public string sound { get; set; }
+
     public Dog(string name, string sound)
     {
         this.name = name;
         this.sound = sound;
     }
+
     public void Details()
     {
         Console.WriteLine(" - - - - - - -  - -");
@@ -41,16 +39,17 @@ class Dog : IAnimal
     }
 }
 
-
-class Cat : IAnimal
+internal class Cat : IAnimal
 {
     public string name { get; set; }
     public string sound { get; set; }
+
     public Cat(string name, string sound)
     {
         this.name = name;
         this.sound = sound;
     }
+
     public void Details()
     {
         Console.WriteLine(" - - - - - - -  - -");
